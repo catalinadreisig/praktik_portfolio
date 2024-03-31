@@ -640,3 +640,35 @@ p {
     margin-bottom: 15%;
   }
 }
+
+.recommendations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  margin-bottom: 5%;
+}
+.recommendations a {
+  text-decoration: none;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1cqw;
+  background-color: #fda1ca;
+  border: 8px solid #0f1f9e;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.recommendations a:hover {
+  background-color: #faea61;
+}
+
+@media screen and (max-width: 750px) {
+  .recommendations a {
+    height: 100%;
+    font-size: 3cqw;
+  }
+}
