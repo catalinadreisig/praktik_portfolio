@@ -1,0 +1,675 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*************************** BAGGRUND *********************************/
+body {
+  position: relative;
+  background-color: #f0ffff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.forsidebody {
+  background-image: url("img/baggrundinfiny.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat-y;
+}
+
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/*************************** MENU *********************************/
+header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fda1ca;
+  top: 0;
+  padding: 1rem 2rem;
+  box-shadow: 0 8px 28px 0 rgb(0 0 0 / 30%);
+  z-index: 100;
+}
+
+.logo {
+  z-index: 100;
+}
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 120%;
+}
+a:hover {
+  color: #faea61;
+}
+a:active {
+  color: #faea61;
+}
+
+/*************************** BURGER MENU *********************************/
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 110%;
+  height: 30%;
+  background-color: #faea61;
+  margin-bottom: 11%;
+}
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    z-index: 10;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #fda1ca;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/*************************** FOOTER *********************************/
+footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 25%;
+  background-color: #faea61;
+  padding: 8%;
+  padding-top: 4%;
+}
+footer a {
+  width: 10%;
+}
+
+.footerindhold {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+  }
+}
+
+/******** H3 & H1 *********/
+
+h3 {
+  text-decoration: none;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 120%;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h3:last-child {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+h1:last-child {
+  margin-bottom: 5%;
+}
+
+h1 {
+  text-decoration: none;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-size: 80%;
+  font-weight: 400;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  margin-bottom: 2%;
+}
+
+/*************************** OVERSKRIFTER *********************************/
+@media screen and (max-width: 750px) {
+  .overskrifter {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  .box_02 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1%;
+    column-gap: 1%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 6%;
+    margin-bottom: 20%;
+  }
+}
+
+.overskrifter {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-size: 2cqw;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  background-color: azure;
+}
+
+/*************************** FORSIDE *********************************/
+#midtext {
+  margin-bottom: 20%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+#midtext li {
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-size: 9cqw;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+#imgcred {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 15;
+  margin-top: 4%;
+}
+
+#imgcred img {
+  width: 50%;
+}
+
+@media screen and (max-width: 750px) {
+  #midtext {
+    margin-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    margin-top: 30%;
+  }
+
+  #midtext li {
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-size: 12cqw;
+    color: #0f1f9e;
+    text-transform: uppercase;
+    list-style: none;
+  }
+
+  #imgcred {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 15;
+    margin-left: -2%;
+  }
+
+  #imgcred img {
+    width: 70%;
+  }
+}
+/****************************** BUTTON ********************************/
+.center_button {
+  display: flex;
+  justify-content: center;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.site_button {
+  color: #faea61;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 2% 2%;
+  border: 8px solid #0f1f9e;
+  font-size: 2cqw;
+  text-transform: uppercase;
+  transition: background 0.275s;
+  background: #fda1ca;
+}
+
+@media screen and (max-width: 800px) {
+  .site_button {
+    color: #faea61;
+    text-transform: uppercase;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 2% 2%;
+    border: 8px solid #0f1f9e;
+    font-size: 3cqw;
+    text-transform: uppercase;
+    transition: background 0.275s;
+    background: #fda1ca;
+  }
+}
+
+.site_button:hover,
+.site_button:focus {
+  border: 8px solid #0f1f9e;
+  background: #faea61;
+  color: #fda1ca;
+  cursor: pointer;
+}
+
+/*****ME****/
+#imgmoi img {
+  width: 34%;
+}
+
+#imgmoi {
+  display: flex;
+  justify-content: right;
+  position: absolute;
+  z-index: 15;
+  margin-top: 8%;
+  margin-right: 14%;
+}
+
+.infomoi {
+  font-family: "Avenir Next";
+  font-weight: lighter;
+  text-align: left;
+  width: fit-content;
+  background-color: azure;
+
+  border: 8px solid #0f1f9e;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+#img_02_4 {
+  display: flex;
+  justify-content: center;
+}
+#img_02_4 img {
+  width: 60%;
+  border: 8px solid #0f1f9e;
+}
+
+/*************************** GRID*********************************/
+p {
+  font-family: "Avenir Next";
+  font-weight: lighter;
+  text-align: left;
+  background-color: azure;
+  padding-bottom: 2%;
+  font-size: 1.2cqw;
+}
+
+@media screen and (max-width: 750px) {
+  p {
+    font-family: "Avenir Next";
+    font-weight: lighter;
+    text-align: left;
+    background-color: azure;
+    padding-bottom: 2%;
+    font-size: 2cqw;
+  }
+}
+
+.grid_02 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20%;
+}
+
+/* .02 - first tekst */
+.emner {
+  margin-top: 4%;
+}
+
+/* .02 - temabeskrivelserne */
+.temabeskrivelser {
+  margin-top: 6%;
+  font-family: "Avenir Next";
+  font-weight: lighter;
+  text-align: left;
+  width: fit-content;
+  background-color: azure;
+
+  /*border: 8px solid #0f1f9e; */
+}
+
+/* .02 - img propeties for grid_01 */
+#img_02_1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+#img_02_1 img {
+  width: 50%;
+  border: 8px solid #0f1f9e;
+}
+
+#img_02_2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+#img_02_2 img {
+  width: 80%;
+  border: 8px solid #0f1f9e;
+}
+
+/*.grid_02tekst {
+  font-family: "Avenir Next";
+  font-weight: lighter;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 8%;
+}*/
+
+.grid_02tekst img {
+  display: flex;
+  justify-content: center;
+}
+
+.grid_02 img {
+  border: 8px solid #0f1f9e;
+}
+
+@media screen and (min-width: 750px) {
+  .grid_02 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3.5%;
+    column-gap: 4%;
+    margin-bottom: 65%;
+    margin-top: 6%;
+  }
+
+  /* Opdateret CSS-regel for at sikre, at billeder har fast højde og bredde */
+  .grid_02 img,
+  .img_02_3 img {
+    width: 100% !important; /* Fast bredde med høj prioritet */
+    height: 340px !important; /* Fast højde med høj prioritet */
+    object-fit: cover !important; /* Sikrer dækning uden forvrængning med høj prioritet */
+  }
+}
+
+.tekstom {
+  font-family: "Avenir Next";
+  font-weight: lighter;
+  text-align: left;
+  width: fit-content;
+}
+
+.img_02_3 {
+  position: relative;
+  margin-top: 2%;
+}
+
+/* .02 - overlay DESKTOP  */
+
+@media screen and (min-width: 750px) {
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #0f1f9e;
+    background-color: #faeb61c8;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .overlay a {
+    text-transform: uppercase;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    color: #0f1f9e;
+    text-decoration: none;
+    font-size: 2.5cqw;
+  }
+
+  .overlay p {
+    font-family: "franklin-gothic-atf", sans-serif;
+    color: #0f1f9e;
+    text-decoration: none;
+    font-size: 1cqw;
+    background: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.img_02_3:hover .overlay {
+  opacity: 1;
+}
+
+.img_02_3 img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 750px) {
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .overlay a {
+    text-decoration: none;
+    color: #0f1f9e;
+    text-transform: uppercase;
+    font-family: "franklin-gothic-atf", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5cqw;
+    margin-top: 15%;
+    animation: zoomInOut 1.5s infinite;
+    background-color: #fda1ca;
+    border: 8px solid #0f1f9e;
+    margin-bottom: 2%;
+  }
+
+  @keyframes zoomInOut {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  .overlay p {
+    margin-top: 1%;
+    font-family: "franklin-gothic-atf", sans-serif;
+    color: #0f1f9e;
+    font-size: 2cqw;
+    background: none;
+    animation: none;
+  }
+}
+
+/***************         GRID_03         ***********/
+.grid_03 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 2%;
+  border: 8px solid #0f1f9e;
+  padding: 2%;
+  background-color: #f0ffff;
+}
+
+.grid_03 a {
+  text-decoration: none;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4cqw;
+  animation: zoomInOut 1.5s infinite;
+  background-color: #fda1ca;
+  border: 8px solid #0f1f9e;
+  margin-bottom: 2%;
+  height: 100px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.grid_03 a:hover {
+  background-color: #faea61;
+}
+
+@media screen and (max-width: 750px) {
+  .grid_03 a {
+    height: 50px;
+    margin-top: 30%;
+    font-size: 3cqw;
+  }
+
+  .grid_03 {
+    margin-bottom: 15%;
+  }
+}
+
+.recommendations {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+  margin-bottom: 2%;
+  place-content: center;
+}
+.recommendations a {
+  text-decoration: none;
+  color: #0f1f9e;
+  text-transform: uppercase;
+  font-family: "franklin-gothic-atf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1cqw;
+  background-color: #fda1ca;
+  border: 8px solid #0f1f9e;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.recommendations a:hover {
+  background-color: #faea61;
+}
+
+@media screen and (max-width: 750px) {
+  .recommendations a {
+    height: 100%;
+    font-size: 3cqw;
+  }
+}
