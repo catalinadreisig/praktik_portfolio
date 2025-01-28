@@ -472,7 +472,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 3.5%;
     column-gap: 4%;
-    margin-bottom: 65%;
+    margin-bottom: 80%;
     margin-top: 6%;
   }
 
